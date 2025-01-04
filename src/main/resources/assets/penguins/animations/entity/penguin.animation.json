@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.penguin.idle": {
+		"misc.idle": {
 			"loop": true,
 			"animation_length": 2,
 			"bones": {
@@ -68,7 +68,7 @@
 				}
 			}
 		},
-		"animation.penguin.walk": {
+		"move.walk": {
 			"loop": true,
 			"animation_length": 0.5,
 			"bones": {
@@ -155,22 +155,6 @@
 						"0.25": {
 							"vector": [0, 1, 0],
 							"easing": "easeOutQuad"
-						},
-						"0.5": {
-							"vector": [0, 0, 0],
-							"easing": "easeInQuad"
-						}
-					}
-				},
-				"BODY": {
-					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"0.25": {
-							"vector": [0, 0, 7.5],
-							"easing": "easeInQuad"
 						},
 						"0.5": {
 							"vector": [0, 0, 0],
