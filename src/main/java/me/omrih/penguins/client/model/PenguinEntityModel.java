@@ -1,4 +1,4 @@
-package me.omrih.penguins.client.entity;
+package me.omrih.penguins.client.model;
 
 import me.omrih.penguins.entity.PenguinEntity;
 import net.minecraft.util.Identifier;

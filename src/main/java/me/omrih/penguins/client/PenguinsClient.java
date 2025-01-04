@@ -1,7 +1,7 @@
 package me.omrih.penguins.client;
 
 import me.omrih.penguins.Penguins;
-import me.omrih.penguins.client.entity.PenguinEntityRenderer;
+import me.omrih.penguins.client.renderer.PenguinEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 

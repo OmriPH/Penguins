@@ -1,5 +1,6 @@
-package me.omrih.penguins.client.entity;
+package me.omrih.penguins.client.renderer;
 
+import me.omrih.penguins.client.model.PenguinEntityModel;
 import me.omrih.penguins.entity.PenguinEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
