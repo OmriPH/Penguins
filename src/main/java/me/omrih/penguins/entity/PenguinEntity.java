@@ -14,8 +14,6 @@ public class PenguinEntity extends MobEntity implements GeoEntity {
 
     public PenguinEntity(EntityType<? extends MobEntity> entityType, World world) {
         super(entityType, world);
-
-        this.ignoreCameraFrustum = true;
     }
 
     @Override
