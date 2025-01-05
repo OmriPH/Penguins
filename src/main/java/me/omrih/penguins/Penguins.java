@@ -29,7 +29,6 @@ public class Penguins implements ModInitializer {
         FabricDefaultAttributeRegistry.register(PENGUIN, PenguinEntity.createMobAttributes());
 
         Registry.register(Registries.ITEM, Identifier.of("penguins", "penguin_spawn_egg"), PENGUIN_SPAWN_EGG);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> content.add(PENGUIN_SPAWN_EGG));
     }
 }
