@@ -2,6 +2,8 @@ package me.omrih.penguins;
 
 import me.omrih.penguins.entity.PenguinEntity;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.EntityType;
@@ -12,6 +14,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.BiomeKeys;
 
 public class Penguins implements ModInitializer {
     public static final String MOD_ID = "penguins";
@@ -27,6 +30,13 @@ public class Penguins implements ModInitializer {
     @Override
     public void onInitialize() {
         FabricDefaultAttributeRegistry.register(PENGUIN, PenguinEntity.createMobAttributes());
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
+                BiomeKeys.SNOWY_PLAINS,
+                BiomeKeys.FROZEN_OCEAN,
+                BiomeKeys.DEEP_FROZEN_OCEAN,
+                BiomeKeys.FROZEN_PEAKS,
+                BiomeKeys.FROZEN_RIVER
+        ), SpawnGroup.CREATURE, PENGUIN, 30, 1, 2);
 
         Registry.register(Registries.ITEM, Identifier.of("penguins", "penguin_spawn_egg"), PENGUIN_SPAWN_EGG);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> content.add(PENGUIN_SPAWN_EGG));
