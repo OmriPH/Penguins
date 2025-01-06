@@ -3,6 +3,9 @@ package me.omrih.penguins.entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.mob.PathAwareEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -20,6 +23,12 @@ public class PenguinEntity extends PathAwareEntity implements GeoEntity {
     @Override
     public void initGoals() {
         this.goalSelector.add(10, new WanderAroundFarGoal(this, 0.3d));
+    }
+
+    @Override
+    public ActionResult interactMob(PlayerEntity player, Hand hand) {
+        player.startRiding(this);
+        return ActionResult.SUCCESS;
     }
 
     @Override
