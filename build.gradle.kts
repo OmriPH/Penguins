@@ -61,13 +61,15 @@ tasks.processResources {
     inputs.property("version", mod.version)
     inputs.property("mcdep", mcDep)
     inputs.property("fabric_loader", deps["fabric_loader"])
+    inputs.property("geckolib_version", deps["geckolib_version"])
 
     val map = mapOf(
         "id" to mod.id,
         "name" to mod.name,
         "version" to mod.version,
         "mcdep" to mcDep,
-        "fabric_loader" to deps["fabric_loader"]
+        "fabric_loader" to deps["fabric_loader"],
+        "geckolib_version" to deps["geckolib_version"]
     )
 
     filesMatching("fabric.mod.json") { expand(map) }

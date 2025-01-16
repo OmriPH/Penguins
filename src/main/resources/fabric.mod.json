@@ -23,6 +23,7 @@
   "depends": {
     "fabricloader": ">=${fabric_loader}",
     "fabric-api": "*",
-    "minecraft": "${mcdep}"
+    "minecraft": "${mcdep}",
+    "geckolib": "${geckolib_version}"
   }
 }
