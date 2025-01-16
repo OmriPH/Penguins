@@ -21,8 +21,8 @@
     "penguins.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=${fabric_loader}",
     "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${mcdep}"
   }
 }
